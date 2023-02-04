@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #0f2842;
+    /* background-color: #1f3348; */   
+}
+
+nav {
+    height: 100px;
+}
+
+#logo {
+    display: inline-block;
+
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    color: white;
+
+    padding: 1.5% 0 0 10%;
+}
+
+#website-pageslinks {
+    display: inline-block;
+
+    margin-left: 33%;
+}
+
+#website-pageslinks > li {
+    display: inline-block;
+
+    margin-right: 35px;
+    padding-bottom: 2px;
+}
+
+#website-pageslinks > li:not(.selected) > a {
+    padding-bottom: 2px;
+
+    border-bottom: 2.5px solid #0f2842;
+}
+
+#website-pageslinks > li:not(.selected) > a:hover {
+    animation: select_load_line 0.5s ease-in-out;
+    border-bottom: 2.5px solid goldenrod;
+}
+
+#website-pageslinks > li > a {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    text-decoration: none;
+    color: white;
+}
+
+#website-pageslinks > .selected > a {
+
+    animation: select_load_link 1.8s ease-out 0.2s;
+    animation-fill-mode: forwards;
+}
+
+#website-pageslinks > .selected {
+    animation: select_load_line 1.8s ease-out 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes select_load_link {
+    from {
+        color: white;
+    }
+    to {
+        color: goldenrod;
+    }
+}
+
+@keyframes select_load_line {
+    from {
+        border-bottom: 2.5px solid #0f2842;
+    }
+    to {
+        border-bottom: 2.5px solid goldenrod;
+    }
+}

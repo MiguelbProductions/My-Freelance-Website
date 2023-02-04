@@ -1,0 +1,55 @@
+#landpage-content {
+    position: absolute;
+
+    top: 29%;
+    left: 10%;
+
+    color: white;
+
+    animation: fade 10s infinite;
+}
+
+#landpage-content > #salutation {
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    color: goldenrod;
+}
+
+#landpage-content > #content {
+    font-size: 74px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#landpage-content > #content > #name, #function {
+    color: #e8b42e;
+}
+
+#landpage-content > #sub-content {
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#profile-photo {
+    position: absolute;
+
+    bottom: 0%;
+    right: 8%;
+
+    animation: fade 10s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
