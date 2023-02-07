@@ -8,7 +8,7 @@ setInterval(() => {
         console.log(content);
         content[0].innerHTML = "And";
         content[1].innerHTML = 'I\'m <span id="name"> Alan <br> João.</span>';
-        content[2].innerHTML = 'A Freelancer <span id="function">Python Dev</span>'
+        content[2].innerHTML = 'A Freelancer <span id="function">Back end</span>'
 
         image.src = "../Data/Images/Alan.png"
 

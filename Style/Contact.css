@@ -1,0 +1,71 @@
+h1 {
+    font-size: 65px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    color: white;
+
+    text-align: center;
+}
+
+#small-slogan {
+    text-align: center;
+    
+    width: 70%;
+
+    margin: auto;
+    margin-top: 3%;
+}
+
+#small-slogan > p {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    color: #f1f1f1;
+}
+
+#references-content {
+    width: 95%;
+    
+    margin: auto;
+    margin-top: 5.5%;
+
+    text-align: center;
+}
+
+#references-content a {
+    text-decoration: none;
+
+    color: #cfcfcf;
+}
+
+.icon-text {
+    display: inline-block;
+
+    width: 25%;
+    height: 50%;
+
+    margin: 0 3%;
+}
+
+.icon {
+    display: inline-block;
+
+    background: #1a1a2c;
+    color: goldenrod;
+
+    margin-bottom: 7%;
+
+    border: 2.5em solid #1a1a2c;
+
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    color: #e7e7e7;
+}
