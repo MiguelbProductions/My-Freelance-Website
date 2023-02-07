@@ -1,0 +1,80 @@
+
+h1 {
+    font-size: 65px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    color: white;
+
+    text-align: center;
+}
+
+#apresentation-text {
+    text-align: center;
+    
+    width: 90%;
+
+    margin: auto;
+    margin-top: 1.5%;
+}
+
+#apresentation-text > p {
+    font-size: 21px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    color: #f1f1f1;
+}
+
+
+#themes-content {
+    display: flex;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 2% 5%;
+}
+
+.theme-box {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;   
+
+    width: 30%;
+    height: 10em;
+
+    margin-top: 2%;
+
+    background-color: #1a1a2c;
+
+    text-align: center;
+
+    border-radius: 20px;
+}
+
+.theme-box i {
+    color: goldenrod;
+
+    padding: 8% 0;
+}
+
+.text {
+    font-size: 25px;
+    
+    color: white;
+    
+    width: 100em;
+}
+
+.bar {
+    width: 25%;
+    height: 1.5px;
+
+    background-color: goldenrod;
+
+    margin: auto;
+    margin-top: 3%;
+
+    border-radius: 15px;
+}
