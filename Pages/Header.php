@@ -7,6 +7,10 @@
 
         <link rel="stylesheet" href="../Style/Header.css">
 
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
+
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
         </style>
@@ -39,22 +43,15 @@
                         </span>
                     </a>
                 </li>
-                <li <?php if(basename($_SERVER['PHP_SELF']) == "Skills.php") echo 'class="selected"'?>>
-                    <a href="">
-                        <span>
-                            Skills
-                        </span>
-                    </a>
-                </li>
                 <li <?php if(basename($_SERVER['PHP_SELF']) == "About.php") echo 'class="selected"'?>>
-                    <a href="">
+                    <a href="About.php">
                         <span>
                             About
                         </span>
                     </a>
                 </li>
                 <li <?php if(basename($_SERVER['PHP_SELF']) == "Contact.php") echo 'class="selected"'?>>
-                    <a href="">
+                    <a href="Contact.php">
                         <span>
                             Contact
                         </span>

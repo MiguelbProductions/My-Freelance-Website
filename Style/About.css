@@ -1,0 +1,112 @@
+body {
+    overflow: hidden;
+}
+
+#profilephoto-miguel, #profilephoto-alan {
+    transition: transform 1.1s ease-in-out;
+
+    margin-right: 3%;
+}
+
+#profilephoto-miguel {
+    float: left;
+}
+
+#profilephoto-alan {
+    float: right;
+}
+
+#about-content {
+    transform: translate(4%);
+
+    transition: transform 1s ease-in-out;
+
+    width: 160em;
+
+    margin-top: 2.5%;
+}
+
+#aboutcontent-miguel, #aboutcontent-alan {
+    color: white;
+}
+
+#aboutcontent-miguel {
+    float: left;
+
+    margin-right: 1%;
+}
+
+#aboutcontent-alan {
+    float: right;
+
+}
+
+h1, h2 {
+    font-size: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+}
+
+#about-info {
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    margin-top: 50px;
+
+    line-height: 2.2;
+}
+
+#about-info > b {
+    color: goldenrod;
+}
+
+h2 {
+    font-size: 30px;
+
+    margin-top: 50px;   
+}
+
+h2 > b {
+    color: #eccf2b;
+}
+
+#download-cv {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    background: goldenrod;
+
+    width: 12em;
+
+    padding: 15px;
+    margin-top: 35px;
+
+    border: 0;
+    border-radius: 15px;
+}
+
+#previous-btn, #following-btn {
+    display: flex;
+    position: absolute;
+
+    color: white;
+}
+
+#previous-btn:hover, #following-btn:hover {
+    color: goldenrod;
+}
+
+#previous-btn {
+    top: 45%;
+    left: 3%;
+
+    opacity: 0;
+}
+
+#following-btn {
+    top: 45%;
+    right: 3%;
+}
