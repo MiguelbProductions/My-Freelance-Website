@@ -19,37 +19,61 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form action="VerifyLogin.php" method="post" class="login100-form validate-form">
 					<span class="login100-form-title p-b-49">
-						Login
+						Register
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23">
+					<div class="wrap-input100 m-b-35">
 						<span class="label-input100">Email</span>
 						<input class="input100" type="text" name="email" placeholder="Type your email" required>
+						<span class="focus-input100" data-symbol="&#xf15a;"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-35">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="Type your username" required>
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-50">
+					<div class="wrap-input100 m-b-35">
+						<span class="label-input100">First Name</span>
+						<input class="input100" type="text" name="first_name" placeholder="Type your first name" required>
+						<span class="focus-input100" data-symbol="&#xf225;"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-35">
+						<span class="label-input100">Last Name</span>
+						<input class="input100" type="text" name="last_name" placeholder="Type your last name" required>
+						<span class="focus-input100" data-symbol="&#xf225;"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-35">
 						<span class="label-input100">Password</span>
 						<input class="input100" type="password" name="password" placeholder="Type your password" required>
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-60">
+						<span class="label-input100">Birthday</span>
+						<input class="input100" type="date" name="birthday" required>
+						<span class="focus-input100" data-symbol="&#xf337;"></span>
 					</div>
 					
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn" type="submit" name="login">
-								Login
+								Register
 							</button>
 						</div>
 					</div>
 
 					<div class="flex-col-c p-t-45">
 						<span class="txt1 p-b-17">
-							Or Sign Up Using
+							Already have an account?
 						</span>
 
-						<a href="Register.php" class="txt2">
-							Sign Up
+						<a href="index.php" class="txt2">
+							Log In
 						</a>
 					</div>
 				</form>
