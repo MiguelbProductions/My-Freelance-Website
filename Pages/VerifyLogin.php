@@ -23,6 +23,7 @@
 
             $email_founded = "";
             $password_founded = "";
+            $user_founded = "";
 
             $title_error = "";
             $description_error = "";
@@ -33,6 +34,7 @@
                         if ($user["Email"] == $_POST["email"]) {
                             $email_founded = $user["Email"];
                             $password_founded = $user["Password"];
+                            $user_founded = $user["Username"];
                         }
                     }
 
@@ -40,7 +42,13 @@
                         $title_error = "Conta Inexistente!";
                         $description_error = "Esse email ainda não foi registrado, por favor insira um email já cadastrado ou <a href='Register.php' style='font-size: 20px'>registre</a> uma nova conta";
                     } else if ($password_founded == $_POST["password"]){
-                        $_SESSION["username"] = $user["Username"];
+                        session_start();
+
+                        $_SESSION["username"] = $user_founded;
+
+                        if (!$_COOKIE["random_cookie"]) {
+                            setcookie('random_cookie', 'random_value_cookie', time() + 60);
+                        }
 
                         header("Location: Home.php");   
                     } else {

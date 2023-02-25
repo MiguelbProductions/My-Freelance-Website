@@ -15,14 +15,27 @@
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
         </style>
 
-        <?php session_start(); ?>
+        <?php 
+            session_start(); 
+
+            if (!$_SESSION["username"]) {
+                header("Location: index.php");
+            }
+
+            if (isset($_POST["logout_btn"])) {
+                session_unset();
+                session_destroy();
+
+                header("Location: index.php");
+            }
+        ?>
     </head>
     <body>
         <nav>
             <div id="logo">
                 MIGUEL AND ALAN
             </div>
-    
+
             <ul id="website-pageslinks">
                 <li <?php if(basename($_SERVER['PHP_SELF']) == "index.php") { echo 'class="selected"'; } ?>>
                     <a href="index.php">
@@ -35,13 +48,6 @@
                     <a href="Services.php">
                         <span>
                             Services
-                        </span>
-                    </a>
-                </li>
-                <li <?php if(basename($_SERVER['PHP_SELF']) == "Hireus.php") echo 'class="selected"'?>>
-                    <a href="">
-                        <span>
-                            Hire us
                         </span>
                     </a>
                 </li>
@@ -60,6 +66,14 @@
                     </a>
                 </li>
             </ul>
+
+            <form method="post" style="display: inline">
+                <button id="user-logout" type="submit" name="logout_btn">
+                    <?php echo $_SESSION["username"]; ?> 
+                    <i class="fa-solid fa-right-from-bracket" style="padding-left: 8px"></i>
+                </div>
+            </form>
+
         </nav>
     </body>
 </html>

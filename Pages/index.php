@@ -13,6 +13,18 @@
 
 </head>
 <body>
+	<header>
+		<div class="header">
+			<h2>Informações Sobre o Autor</h2>
+			<button id="toggle-header">&#9660;</button>
+		</div>
+
+		<div class="content hidden" style="color: white">
+			<p>Site Realizado por o Miguel Brandão Nº17 11ºF para o Trabalho de Redes do Modulo 2 do 11º ano</p>
+		</div>
+	</header>
+	
+
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/23010e05-5ffd-4d0b-adda-7eba12d2f5a6/d1rwjc9-426fbe6a-aed3-4460-b8cd-a175b2929eaf.jpg/v1/fill/w_1192,h_670,q_70,strp/high_quality_psp_wallpaper_by_will_yen_d1rwjc9-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvMjMwMTBlMDUtNWZmZC00ZDBiLWFkZGEtN2ViYTEyZDJmNWE2XC9kMXJ3amM5LTQyNmZiZTZhLWFlZDMtNDQ2MC1iOGNkLWExNzViMjkyOWVhZi5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.OlalY9H4IeEv6mfP82gvukHOsOo0NPcE1i2Om6Ng9Ik');">
@@ -55,6 +67,34 @@
 				</form>
 			</div>
 		</div>
-	</div>
+
+		<footer>
+			<div class="container">
+				<div class="footer-content">
+					<p>Para mais informações contacte me através do <a href="mailto:miguellbproductions@gmail.com"><b>email</b></a> ou através do meu <a href="tel:927-326-387"><b>número de telefone</b></a>.</p>
+				</div>
+			</div>
+		</footer>
+
+
+		<script>
+			const toggleHeader = document.querySelector('#toggle-header');
+			const content = document.querySelector('.content');
+
+			open = false
+
+			toggleHeader.addEventListener('click', () => {
+				content.classList.toggle('hidden');
+
+				if (open) {
+					toggleHeader.innerHTML = "&#9660;";
+				} else {
+					toggleHeader.innerHTML = "&#9650;";
+				}
+
+				open = !open;
+			});
+
+		</script>
 	</body>
 </html>

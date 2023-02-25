@@ -24,10 +24,27 @@ nav {
     padding: 1.5% 0 0 10%;
 }
 
+#user-logout {
+    display: inline-block;
+
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    color: white;
+    background-color: goldenrod;
+
+    padding: 5px 15px;
+    margin-left: 2.5%;
+
+    border: 3px solid #aa8119;
+    border-radius: 20px;   
+}
+
 #website-pageslinks {
     display: inline-block;
 
-    margin-left: 35.5%;
+    margin-left: 26%;
 }
 
 #website-pageslinks > li {
