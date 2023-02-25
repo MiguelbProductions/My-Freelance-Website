@@ -37,7 +37,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" type="submit" name="login">
+							<button class="login100-form-btn" type="submit" name="login_btn">
 								Login
 							</button>
 						</div>

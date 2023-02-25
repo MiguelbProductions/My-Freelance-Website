@@ -13,7 +13,7 @@
 
     <?php
 
-        if (isset($_POST["login"])) {
+        if (isset($_POST["login_btn"])) {
             $pdo = new PDO("mysql: host=localhost; dbname=freelancer_website", "root", "");
 
             $sql = $pdo -> prepare("SELECT Email, Password, Username FROM clients");
