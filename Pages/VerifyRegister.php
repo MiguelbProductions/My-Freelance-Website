@@ -20,6 +20,20 @@
             $description_error = "";
 
             try {
+                $pdo2 = new PDO("mysql: host=localhost; dbname=freelancer_website", "root", "");
+
+                $sql2 = $pdo2 -> prepare("SELECT Email FROM clients");
+                $sql2 -> execute();
+
+                $info2 = $sql2 -> fetchAll(PDO::FETCH_ASSOC);
+
+                foreach ($info2 as $key => $user) {
+                    if ($user["Email"] == $_POST["email"]) {
+                        throw new Exception("Email Unavaliable");
+                    }
+                }
+
+
                 if (!strstr($_POST["email"], "@gmail.com") && !strstr($_POST["email"], "@hotmail.com") && !strstr($_POST["email"], "@msn.com")) {
                     throw new Exception("Invalid_Email");
                 } 
@@ -57,7 +71,12 @@
                     throw new Exception("Too Young");
                 } 
 
+                $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+                $sql = $pdo -> prepare("INSERT INTO clients VALUES (null, ?, ?, ?, ?, ?, ?)");
+                $sql -> execute(array($_POST["email"], $password, $_POST["username"], $_POST["first_name"], $_POST["last_name"], $_POST["birthday"]));
                 
+                header("Location: index.php");
 
             } catch (Exception $e) {
                 $message = $e -> getMessage();
@@ -107,12 +126,12 @@
                     $description_error = "Por favor insira uma idade valida!";
                 }
 
-            }
+                if ($message == "Email Unavaliable") {
+                    $title_error = "Email já está registrado";
+                    $description_error = "Esse email já está registrado por favor insira outro diferente por favor.";
+                }
 
-            $sql = $pdo -> prepare("INSERT INTO clients VALUES (null, ?, ?, ?, ?, ?, ?)");
-                $sql -> execute(array($_POST["email"], $_POST["password"], $_POST["username"], $_POST["first_name"], $_POST["last_name"], $_POST["birthday"]));
-                
-                header("Location: index.php");
+            }
         }
 
         if (isset($_POST["gotoregister"])) {

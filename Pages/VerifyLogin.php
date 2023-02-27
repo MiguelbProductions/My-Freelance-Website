@@ -41,7 +41,7 @@
                     if ($email_founded == "") {
                         $title_error = "Conta Inexistente!";
                         $description_error = "Esse email ainda não foi registrado, por favor insira um email já cadastrado ou <a href='Register.php' style='font-size: 20px'>registre</a> uma nova conta";
-                    } else if ($password_founded == $_POST["password"]){
+                    } else if (password_verify($_POST["password"], $password_founded)){
                         session_start();
 
                         $_SESSION["username"] = $user_founded;

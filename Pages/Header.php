@@ -38,7 +38,7 @@
 
             <ul id="website-pageslinks">
                 <li <?php if(basename($_SERVER['PHP_SELF']) == "index.php") { echo 'class="selected"'; } ?>>
-                    <a href="index.php">
+                    <a href="Home.php">
                         <span>
                             Home
                         </span>
